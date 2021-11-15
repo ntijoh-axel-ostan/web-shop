@@ -1,0 +1,26 @@
+{
+  "name": "web-shop",
+  "version": "1.0.0",
+  "description": "Axel test på webshop",
+  "main": "index.js",
+  "scripts": {
+    "build": "esbuild --bundle ./ts/main.ts  --outfile=./js/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ntijoh-axel-ostan/web-shop.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ntijoh-axel-ostan/web-shop/issues"
+  },
+  "homepage": "https://github.com/ntijoh-axel-ostan/web-shop#readme",
+  "dependencies": {
+    "esbuild": "^0.13.13",
+    "typescript": "^4.4.4"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.7"
+  }
+}

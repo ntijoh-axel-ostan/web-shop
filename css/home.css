@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+:root{
+    --grey: #787A91;
+    --blue: #141E61;
+    --lightgray:#d6d6d6 ;
+    --white: #EEEEEE;
+    --darkblue: #070225; 
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body, html{
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(20, 20, 20);
+}
+
+#productsDiv{
+    display: grid;
+    width: max-content;
+    margin-top: 15%;
+    margin-left: 20%;
+    grid-template-columns: 190px 190px 190px 190px;
+    padding-left: 5%;
+}
+.products{
+    width: 200px;
+    cursor: pointer;
+}
+.products img:hover{
+    filter: blur(0px);
+}
+
+.products img{
+    height: 225px;
+    vertical-align: middle;
+    filter: blur(4px);
+    border-style: solid;
+    border-width: 2px;
+    border-color:gainsboro;
+    border-radius: 1px 1px 1px 1px;
+}
+
+
+.navbar{
+    width: 115%;
+    justify-content: center;
+    padding-top: 50px;
+    display: grid;
+    grid-template-columns: 80px 140px 250px 130px 230px;
+}
+.navbar div{
+    color:white;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(22.5px, 10vw, 20px);
+    cursor: pointer;
+}
+
+.hero-container {
+
+    margin-top: -50px;
+  }
