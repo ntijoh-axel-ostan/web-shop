@@ -1,16 +1,24 @@
-import products from "../products.json";
 
-function productsPrint(){
+import {displayProducts} from "../ts/clothes";
+displayProducts();
+
+
+    let slideIndex = 0;
+
+function slideShow(){
+    const slides = document.querySelectorAll('#slides img')!;
     
-    const productDiv = document.querySelector('#productsDiv')! as HTMLDivElement;
-    const productTemplate = document.querySelector('#productsTemplate')! as HTMLTemplateElement;
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].className = 'hidden';
+    }
+    slides[slideIndex].className = '';
+    slideIndex++;
+    
+    if (slideIndex > slides.length - 1){
+        slideIndex = 0;
+    }
 
-    products.forEach(element => {
-        const clone = productTemplate.content.cloneNode(true) as HTMLDivElement;
-        clone.querySelector('.products')!.id = element.id;
-        clone.querySelector('img')!.src = element.image;
-        productDiv.appendChild(clone);
-    });
+
+    setTimeout(slideShow, 5000);
 }
-
-productsPrint();
+slideShow();

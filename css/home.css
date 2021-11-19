@@ -1,5 +1,41 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
+    src: local('Material Icons'),
+      local('MaterialIcons-Regular'),
+      url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
+      url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
+      url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
+  }
+
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
 :root{
     --grey: #787A91;
     --blue: #141E61;
@@ -21,7 +57,7 @@ body, html{
 #productsDiv{
     display: grid;
     width: max-content;
-    margin-top: 15%;
+    margin-top: 10%;
     margin-left: 20%;
     grid-template-columns: 190px 190px 190px 190px;
     padding-left: 5%;
@@ -46,13 +82,15 @@ body, html{
 
 
 .navbar{
+    margin-left: 3%;
     width: 115%;
     justify-content: center;
     padding-top: 50px;
     display: grid;
-    grid-template-columns: 80px 140px 250px 130px 230px;
+    grid-template-columns: 80px 140px 250px 130px 230px 50px 50px;
 }
-.navbar div{
+.navbar div a{
+    text-decoration: none;
     color:white;
     font-family: 'Playfair Display', serif;
     font-size: clamp(22.5px, 10vw, 20px);
@@ -62,4 +100,39 @@ body, html{
 .hero-container {
 
     margin-top: -50px;
-  }
+}
+
+
+.startbody h1{
+    color:white;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(80px, 10vw, 20px);
+    margin-left: 25%;
+    margin-top: 7.5%;
+    width: 20px
+}
+
+
+.hidden{
+    display: none;
+}
+
+#slides{
+    margin-left: 50%;
+    margin-top: -30%;
+}
+
+#slides img{
+    height: 500px;
+    cursor: pointer;
+}
+
+#cart{
+    padding-left: 37.5px;
+    font-size: 28px;
+}
+#account{
+    padding-left: 75px;
+    font-size: 28px;
+}
+

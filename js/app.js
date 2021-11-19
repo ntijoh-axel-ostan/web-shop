@@ -43,16 +43,69 @@
     }
   ];
 
-  // ts/main.ts
-  function productsPrint() {
+  // ts/clothes.ts
+  displayProducts();
+  document.querySelectorAll(".checkbox").forEach((item) => {
+    item.addEventListener("click", sorting);
+  });
+  document.querySelector("#sortby select")?.addEventListener("change", sorting);
+  var categories = [];
+  function sorting(e) {
+    let category = e.target.id;
+    if (categories.includes(category) === true) {
+      const index = categories.indexOf(category, 0);
+      if (index > -1) {
+        categories.splice(index, 1);
+      }
+      console.log(categories);
+    } else {
+      categories.push(category);
+      console.log(categories);
+    }
+    displayProducts();
+  }
+  function displayProducts() {
+    console.log("products, " + categories);
     const productDiv = document.querySelector("#productsDiv");
     const productTemplate = document.querySelector("#productsTemplate");
-    products_default.forEach((element) => {
-      const clone = productTemplate.content.cloneNode(true);
-      clone.querySelector(".products").id = element.id;
-      clone.querySelector("img").src = element.image;
-      productDiv.appendChild(clone);
-    });
+    productDiv.innerHTML = "";
+    if (categories === void 0 || categories === null || categories.toString() === "") {
+      products_default.forEach((element) => {
+        console.log(products_default);
+        const clone = productTemplate.content.cloneNode(true);
+        clone.querySelector(".products").id = element.id;
+        clone.querySelector("img").src = element.image;
+        productDiv.appendChild(clone);
+      });
+    } else {
+      products_default.forEach((element) => {
+        console.log(products_default);
+        for (let i = 0; i < categories.length; i++) {
+          if (element.category.includes(categories[i]) === true) {
+            const clone = productTemplate.content.cloneNode(true);
+            clone.querySelector(".products").id = element.id;
+            clone.querySelector("img").src = element.image;
+            productDiv.appendChild(clone);
+          }
+        }
+      });
+    }
   }
-  productsPrint();
+
+  // ts/main.ts
+  displayProducts();
+  var slideIndex = 0;
+  function slideShow() {
+    const slides = document.querySelectorAll("#slides img");
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].className = "hidden";
+    }
+    slides[slideIndex].className = "";
+    slideIndex++;
+    if (slideIndex > slides.length - 1) {
+      slideIndex = 0;
+    }
+    setTimeout(slideShow, 5e3);
+  }
+  slideShow();
 })();

@@ -4,8 +4,9 @@
   "description": "Axel test på webshop",
   "main": "index.js",
   "scripts": {
-    "build": "esbuild --bundle ./ts/main.ts  --outfile=./js/app.js"
+    "build": "esbuild --bundle ./ts/main.ts --outfile=./js/app.js"
   },
+  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ntijoh-axel-ostan/web-shop.git"

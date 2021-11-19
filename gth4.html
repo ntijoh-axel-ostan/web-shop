@@ -6,35 +6,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/logo.css">
-    <script src="./ts/slideshow.ts"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>htg4</title>
 </head>
 <body>
-    <div class="navbar">
-        <div>Sale</div>
-        <div>news</div>
-            <div class="hero-container">
-                <h2 class="hero glitch layers" data-text="htg4"><span>htg4</span></h2>
-            </div>
-        <div>All clothes</div>
-        <div>Special items</div>
-        <div><img src="" alt="" class="login"></div>
-        <div><img src="" alt="" class="cart"></div>
-    </div>
 
-
-    <div id="productsDiv">
-        
-    </div>
-    
     <template id="productsTemplate">
         <div class="products" id="">
             <img src="" class="prod_image" alt="">
         </div>
     </template>
+
+
+    <div class="navbar">
+        <div><a href="#sale">Sale</a></div>
+        <div><a href="#news">News</a></div>
+            <div class="hero-container">
+                <h2 class="hero glitch layers" data-text="htg4"><span>htg4</span></h2>
+            </div>
+        <div><a href="clothes.html">All clothes</a></div>
+        <div><a href="#speacial">Special Items</a></div>
+        <div ><span id="account" class="material-icons">account_circle</span></div>
+        <div><span id="cart" class="material-icons">shopping_cart</span></div>
+    </div>
+
+    <div class="startbody">
+
+    <h1 class="" >New Arrivals 2021/ 2022</h1>
+
+    <div class="slideshow"> 
+        <div id="slides">
+            <img src="img/slideshow1.jpeg" alt="" class="">
+            <img src="img/slideshow2.jpeg" alt="" class="hidden">
+            <img src="img/slideshow3.jpeg" alt="" class="hidden">
+        </div>
+    </div>
+
+    </div>
+
+
+    
+
+    <div id="productsDiv">
+        
+    </div>
+    
+    
     
    
 
-    <!-- <script src="/js/app.js"></script> -->
+    <script src="/js/app.js"></script>
 </body>
 </html>

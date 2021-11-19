@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/logo.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/clothes.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+    <title>htg4 All clothes</title>
+    
+</head>
+<body>
+     
+    <template id="productsTemplate">
+        <div class="products" id="">
+            <img src="" class="prod_image" alt="">
+        </div>
+    </template>
+
+
+    <div class="navbar">
+        <div><a href="#sale">Sale</a></div>
+        <div><a href="#news">News</a></div>
+            <div class="hero-container">
+                <h2 class="hero glitch layers" data-text="htg4"><span>htg4</span></h2>
+            </div>
+        <div><a href="clothes.html">All clothes</a></div>
+        <div><a href="#speacial">Special Items</a></div>
+        <div ><span id="account" class="material-icons">account_circle</span></div>
+        <div><span id="cart" class="material-icons">shopping_cart</span></div>
+    </div>
+    
+    <div id="sortingFilter">
+        <div id="sort">
+
+            <div id="sortby">
+                <label for="sortby">Sort by</label>
+                <select name="sortby" >
+                    <option id="Recommend" value="Recommend">Recommend</option>
+                    <option value="Popular">Popular</option>
+                    <option value="pricelow">Price low</option>
+                    <option value="pricehigh">Price high</option>
+                </select>
+            </div>
+
+            <div id="checkbox">
+                <label for="shoes">Shoes</label>
+                <input class="checkbox" type="checkbox" name="shoes" id="shoes">
+            </div>
+            <div id="checkbox">
+                <label for="bottoms">Bottoms</label>
+                <input class="checkbox" type="checkbox" name="bottoms" id="bottoms">
+            </div>
+            <div id="checkbox">
+                <label for="tops">Tops</label>
+                <input class="checkbox" type="checkbox" name="tops" id="tops">
+            </div>
+            <div id="checkbox">
+                <label for="access">access</label>
+                <input class="checkbox" type="checkbox" name="access" id="access">
+            </div>
+
+        </div>
+
+        <div id="productsDiv">
+        </div>
+
+    </div>
+   
+    <script src="/js/app.js"></script>
+</body>
+</html>
